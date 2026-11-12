@@ -1,16 +1,17 @@
 {
   "expo": {
-    "name": "midtem-danentang",
+    "name": "Quản lý giảng viên",
     "slug": "midtem-danentang",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "midtemdanentang",
-    "userInterfaceStyle": "automatic",
+    "userInterfaceStyle": "light",
     "ios": {
       "icon": "./assets/expo.icon"
     },
     "android": {
+      "package": "com.midtemdanentang.qlgiangvien",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -28,11 +29,21 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#208AEF",
+          "backgroundColor": "#0B7267",
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 76
         }
-      ]
+      ],
+      "expo-secure-store",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Cho phép chọn ảnh đại diện giảng viên từ thư viện.",
+          "cameraPermission": false,
+          "microphonePermission": false
+        }
+      ],
+      ["expo-build-properties", { "android": { "usesCleartextTraffic": true } }]
     ],
     "experiments": {
       "typedRoutes": true,
